@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>tree</Title>
+			<Shortcut>tree</Shortcut>
+			<Description>Frammento di codice per l'inserimento di un albero di esempio</Description>
+			<Author>Nicola Ricciardi</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+            <Code Language="cpp">
+	<![CDATA[
+
+//				 0  1  2  3  4  5  6  7
+ElemType e[] = { 4, 3, 7, 1, 5, 8, 1, 2 };
+Node* root = TreeCreateRoot(e + 0,						// radice
+
+	// SOTTO ALBERO DI SX
+	TreeCreateRoot(e + 1,								// figlio 1 (sx), sottoalbero
+		TreeCreateRoot(e + 3,							// figlio 2 sx
+			TreeCreateRoot(e + 6, NULL, NULL),			// figlio 3 sx, foglia
+			TreeCreateRoot(e + 7, NULL, NULL)			// figlio 3 dx, foglia
+		),
+		NULL),											// figlio 2 dx, puntatore a NULL => foglia					
+
+	// SOTTO ALBERO DI DX
+	TreeCreateRoot(e + 2,								// figlio 1 (dx), sottoalbero
+		TreeCreateRoot(e + 4, NULL, NULL),				// figlio 2 sx, foglia
+		TreeCreateRoot(e + 5, NULL, NULL)				// figlio 2 dx, foglia
+	)
+
+);	// fine					
+/*
+	
+				4              // radice  
+				/ \                  
+				/   \              
+			3     7             // figlio 1
+			/     / \           
+			1     5   8			// figlio 2
+			/ \                     
+		1   2					// figlio 3
+	
+	
+	
+	
+*/
+
+]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>

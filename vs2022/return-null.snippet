@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+	<CodeSnippet Format="1.0.0">
+		<Header>
+			<Title>returnNull</Title>
+			<Shortcut>retNull</Shortcut>
+			<Description>Frammento di codice per l'inserimento del'if return NULL</Description>
+			<Author>Nicola Ricciardi</Author>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+				<SnippetType>SurroundsWith</SnippetType>
+			</SnippetTypes>
+		</Header>
+		<Snippet>
+			<Declarations>
+				<Literal>
+					<ID>condition</ID>
+					<Default>condition</Default>
+					<ToolTip>condizione di ritorno</ToolTip>
+				</Literal>
+				
+			</Declarations>
+            <Code Language="cpp"><![CDATA[
+if($condition$)
+	return NULL;
+
+]]>
+			</Code>
+		</Snippet>
+	</CodeSnippet>
+</CodeSnippets>
