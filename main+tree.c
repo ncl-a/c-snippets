@@ -1,0 +1,55 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+#include <math.h>
+#include <stdio.h>
+#include <stdbool.h>
+#include <stdint.h>
+
+#include "elemtype.h"
+#include "tree.h"
+
+int main(void) {	// CANCELLAMI !!!!!!!!!!!!!!!!!!!!!!
+
+	
+
+
+	//				 0  1  2  3  4  5  6  7
+	ElemType e[] = { 4, 3, 7, 1, 5, 8, 1, 2 };
+	Node* root = TreeCreateRoot(e + 0,						// radice
+
+		// SOTTO ALBERO DI SX
+		TreeCreateRoot(e + 1,								// figlio 1 (sx), sottoalbero
+			TreeCreateRoot(e + 3,							// figlio 2 sx
+				TreeCreateRoot(e + 6, NULL, NULL),			// figlio 3 sx, foglia
+				TreeCreateRoot(e + 7, NULL, NULL)			// figlio 3 dx, foglia
+			),
+			NULL),											// figlio 2 dx, puntatore a NULL => foglia					
+
+		// SOTTO ALBERO DI DX
+		TreeCreateRoot(e + 2,								// figlio 1 (dx), sottoalbero
+			TreeCreateRoot(e + 4, NULL, NULL),				// figlio 2 sx, foglia
+			TreeCreateRoot(e + 5, NULL, NULL)				// figlio 2 dx, foglia
+		)
+
+	);	// fine					
+	
+	//
+	//			  4              // radice
+	//			 / \
+	//			/   \
+	//		   3     7             // figlio 1
+	//		  /     / \
+	//		 1     5   8			// figlio 2
+	//		/ \
+	//	   1   2					// figlio 3
+
+
+
+
+
+
+
+	return 0;
+}
