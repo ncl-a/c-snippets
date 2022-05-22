@@ -15,12 +15,14 @@ int main(void) {	// CANCELLAMI !!!!!!!!!!!!!!!!!!!!!!
 	
 	Item* root;
 	ElemType v[] = { 12, 2, 37, 4 };
+	const length = sizeof(v) / sizeof(ElemType);
 
 	root = ListCreateEmpty();
-	root = ListInsertBack(root, v + 0);
-	root = ListInsertBack(root, v + 1);
-	root = ListInsertBack(root, v + 2);
-	root = ListInsertBack(root, v + 3);
+
+	for (int i = 0; i < length; i++)
+	{
+		root = ListInsertBack(root, v + i);
+	}
 
 
 	return 0;
