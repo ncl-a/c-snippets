@@ -1,0 +1,2 @@
+C:\Users\ricci\Desktop\fondamenti-informatica-2-esame\esame\Project1\x64\Debug\Project1.exe
+C:\Users\ricci\Desktop\fondamenti-informatica-2-esame\esame\es4-heap\x64\Debug\Project1.exe

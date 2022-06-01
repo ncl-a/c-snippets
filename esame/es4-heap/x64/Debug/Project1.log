@@ -1,0 +1,7 @@
+﻿  elemtype.c
+  main+heap.c
+  minheap.c
+C:\Users\ricci\Desktop\fondamenti-informatica-2-esame\esame\es4-heap\minheap.c(40,30): warning C4267: 'funzione': conversione da 'size_t' a 'int'. Possibile perdita di dati.
+C:\Users\ricci\Desktop\fondamenti-informatica-2-esame\esame\es4-heap\minheap.c(100,39): warning C4267: 'funzione': conversione da 'size_t' a 'int'. Possibile perdita di dati.
+  Generazione del codice in corso...
+  Project1.vcxproj -> C:\Users\ricci\Desktop\fondamenti-informatica-2-esame\esame\es4-heap\x64\Debug\Project1.exe
